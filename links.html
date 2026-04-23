@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathalie Bezerra | Estética e Bem-Estar</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="display: none;">
+    <img src="img/loop0.jpeg">
+    <img src="img/loop1.jpeg">
+    <img src="img/loop2.jpeg">
+    <img src="img/loop3.jpeg">
+    <img src="img/loop5.jpeg">
+    <img src="img/loop6.jpeg">
+    <img src="img/loop8.jpg">
+    <img src="img/loop10.jpeg">
+</div>
+
+<header>
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg"Logo Nathalie Bezerra" style="height: 80px; width: auto;">
+        </div>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#servicos">Procedimentos</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#agendamento">Agendar</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div id="home" class="hero">
+        <div class="hero-content">
+            <h1>Nathalie Bezerra</h1>
+            <p>Estética & Bem-Estar</p>
+        </div>
+    </div>
+
+    <section id="servicos">
+        <div class="section-title">
+            <span>Menu de Experiências</span>
+            <h2>Nossos Cuidados</h2>
+        </div>
+        <div class="servicos-grid">
+            <div class="servico-card">
+                <h3>Cabelo</h3>
+                <p>Tratamento personalizado para cabelos diversos.</p>
+                <ul class="price-list">
+                    <li>Tratamento</li>
+                    <li>Tratamento Premium</li>
+                    <li>Escova</li>
+                    <li>Progressiva</li>
+                    <li>Botox</li>
+                </ul>
+            </div>
+            <div class="servico-card">
+                <h3>Unhas</h3>
+                <p>Esmaltação e cuidado profundo.</p>
+                <ul class="price-list">
+                    <li>Manicure & Pedicure</li>
+                    <li>SPA dos Pés</li>
+                    <li>Unhas em gel</li>
+                </ul>
+            </div>
+            <div class="servico-card">
+                <h3>Sobrancelhas</h3>
+                <p>O design ideal para o seu rosto.</p>
+                <ul class="price-list">
+                    <li>Design com Henna</li>
+                    <li>Desiginer com henna</li>
+                </ul>
+            </div>
+            <div class="servico-card">
+                <h3>Estética</h3>
+                <p>Tratamentos que renovam a pele.</p>
+                <ul class="price-list">
+                    <li>Limpeza de Pele</li>
+                    <li>Depilação</li>
+                    <li>Massoterapia</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="sobre">
+            <div class="sobre-img"></div>
+            
+            <div class="sobre-texto">
+                <h2>Olá, sou a Nathalie</h2>
+                <p>Minha missão é unir saúde, beleza e equilíbrio. No meu espaço, cada detalhe é pensado para que você se sinta acolhida e saia renovada.</p>
+                <br>
+                <p>Especialista em realçar sua melhor versão, utilizo técnicas modernas de estética facial e corporal para proporcionar resultados naturais e duradouros.</p>
+                <br>
+                <a href="#agendamento" style="color: var(--primaria); font-weight: bold; text-decoration: none; border-bottom: 1px solid;">CONHEÇA MEU TRABALHO →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendamento">
+        <div class="section-title">
+            <h2>Reserve seu Momento</h2>
+            <span>Agendamento via WhatsApp</span>
+        </div>
+        
+        <form onsubmit="enviarAgendamento(event)">
+            <div class="form-group">
+                <input type="text" id="agend-nome" placeholder="Nome Completo" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="agend-whats" placeholder="Seu Telefone" required>
+            </div>
+            <div class="form-group">
+                <select id="agend-servico" required>
+                    <option value="">Qual procedimento deseja?</option>
+                    <option value="Cabelo">Cabelo</option>
+                    <option value="Unhas">Unhas</option>
+                    <option value="Sobrancelhas">Sobrancelhas</option>
+                    <option value="Estética Facial">Estética Facial</option>
+                </select>
+            </div>
+            <div class="form-group" style="text-align: left;">
+                <label for="agend-data" style="font-size: 0.85rem; color: var(--primaria); font-weight: 600; margin-bottom: 5px; display: block;">
+                    Escolha a data do seu atendimento:
+                </label>
+                <input type="date" id="agend-data" required style="width: 100%;">
+            </div>
+            <button type="submit" class="btn-book">Confirmar Horário via WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        <span class="footer-logo">Nathalie Bezerra</span>
+        <p>Estética e Bem-Estar</p>
+        <p style="margin-top: 20px; font-size: 0.7rem; color: #999;">&copy; 2026. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/5581999208085" class="whatsapp-float" target="_blank">WA</a>
+
+    <script>
+        function enviarAgendamento(event) {
+            event.preventDefault(); 
+
+            var nome = document.getElementById('agend-nome').value;
+            var whats = document.getElementById('agend-whats').value;
+            var servico = document.getElementById('agend-servico').value;
+            var data = document.getElementById('agend-data').value;
+
+            var dataBr = data.split('-').reverse().join('/');
+            var numero = "5581999208085";
+
+            var mensagem = "Olá Nathalie! \n\n" +
+                           "Gostaria de solicitar um agendamento:\n\n" +
+                           "*Nome:* " + nome + "\n" +
+                           "*Procedimento:* " + servico + "\n" +
+                           "*Data:* " + dataBr + "\n" +
+                           "*Contato:* " + whats;
+
+            var textoFinal = encodeURIComponent(mensagem);
+            var urlFinal = "https://wa.me/" + numero + "?text=" + textoFinal;
+
+            window.open(urlFinal, '_blank');
+        }
+
+        window.onload = function() {
+            var today = new Date().toISOString().split('T')[0];
+            document.getElementById("agend-data").setAttribute('min', today);
+        };
+    </script>
+
+</body>
+</html>

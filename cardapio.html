@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathalie Bezerra | Cardápio Completo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ouro: #b8977e;
+            --bege-claro: #e5d3c5;
+            --fundo: #faf9f6;
+            --texto: #5a4a3a;
+            --branco: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--fundo);
+            color: var(--texto);
+            margin: 0; padding: 20px;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        /* Estilo da Logo no Cardápio */
+        .logo-container {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            animation: fadeInLogo 1.2s ease-out;
+        }
+
+        .img-logo-cardapio {
+            width: 180px;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.05));
+        }
+
+        .header-cardapio { text-align: center; margin-bottom: 30px; padding-top: 10px; }
+        .header-cardapio h1 { font-family: 'Playfair Display', serif; color: var(--ouro); font-size: 2.2rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .header-cardapio p { font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; }
+
+        .categoria {
+            width: 100%; max-width: 450px;
+            background: var(--branco);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            border: 1px solid rgba(184, 151, 126, 0.1);
+        }
+
+        .categoria h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: var(--ouro);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--bege-claro);
+        }
+
+        .sub-categoria {
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #a3866f;
+            margin: 20px 0 10px 0;
+            background: var(--fundo);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .item-servico {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin: 14px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px dotted #ddd;
+            padding-bottom: 4px;
+        }
+
+        .item-servico span:first-child { padding-right: 10px; background: white; }
+        .preco { font-weight: 600; color: var(--ouro); background: white; padding-left: 5px; white-space: nowrap; }
+
+        .obs { font-size: 0.7rem; font-style: italic; color: #888; margin-top: 15px; line-height: 1.4; }
+
+        .btn-voltar {
+            text-decoration: none;
+            color: var(--ouro);
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            border: 1px solid var(--ouro);
+            padding: 8px 20px;
+            border-radius: 30px;
+            transition: 0.3s;
+            align-self: center;
+        }
+        
+        .btn-voltar:hover { background: var(--ouro); color: white; }
+
+        @keyframes fadeInLogo {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <a href="links.html" class="btn-voltar">← VOLTAR</a>
+
+    <div class="logo-container">
+        <img src="logo.jpg" alt="Logo Nathalie Bezerra" class="img-logo-cardapio">
+    </div>
+
+    <div class="header-cardapio">
+        <h1>Tabela de Valores</h1>
+        <p>Estética e Bem-Estar</p>
+    </div>
+
+    <div class="categoria">
+        <h2>Cabelo</h2>
+        
+        <div class="sub-categoria">Tratamento Base</div>
+        <div class="item-servico"><span>Lavagem (shampoo e cond.)</span> <span class="preco">30,00</span></div>
+        <div class="item-servico"><span>Lavagem + Escova</span> <span class="preco">A partir de 50,00</span></div>
+        <div class="item-servico"><span>Lavagem + Escova + Hidratação</span> <span class="preco">A partir de 60,00</span></div>
+        <div class="item-servico"><span>Escova sem lavagem</span> <span class="preco">A partir de 40,00</span></div>
+
+        <div class="sub-categoria">Tratamento Profundo TRUSS</div>
+        <div class="item-servico"><span>Lavagem (shampoo e cond.)</span> <span class="preco">55,00</span></div>
+        <div class="item-servico"><span>Lavagem + Escova</span> <span class="preco">A partir de 70,00</span></div>
+        <div class="item-servico"><span>Lavagem + Escova + Hidratação</span> <span class="preco">90,00</span></div>
+
+        <div class="sub-categoria">Transformação e Química</div>
+        <div class="item-servico"><span>Cauterização TRUSS</span> <span class="preco">A partir de 160,00</span></div>
+        <div class="item-servico"><span>Botox</span> <span class="preco">A partir de 90,00</span></div>
+        <div class="item-servico"><span>Progressiva</span> <span class="preco">A partir de 120,00</span></div>
+        <div class="item-servico"><span>Progressiva com Formol</span> <span class="preco">A partir de 140,00</span></div>
+        <div class="item-servico"><span>Coloração (Trazida pela cliente)</span> <span class="preco">25,00 + lavagem</span></div>
+
+        <p class="obs">* Serviços com chapinha ou babyliss têm acréscimo sujeito a avaliação. <br> * Valores avaliados por tamanhos P, M e G.</p>
+    </div>
+
+    <div class="categoria">
+        <h2>Unhas</h2>
+        
+        <div class="sub-categoria">Unhas Naturais</div>
+        <div class="item-servico"><span>Mão + Pé</span> <span class="preco">R$ 50,00</span></div>
+        <div class="item-servico"><span>Mão</span> <span class="preco">R$ 30,00</span></div>
+        <div class="item-servico"><span>Pé</span> <span class="preco">R$ 30,00</span></div>
+        <div class="item-servico"><span>Remoção de Calosidade</span> <span class="preco">R$ 30,00</span></div>
+        <div class="item-servico"><span>Spa dos Pés</span> <span class="preco">R$ 85,00</span></div>
+
+        <div class="sub-categoria">Unhas Artificiais</div>
+        <div class="item-servico"><span>Alongamento</span> <span class="preco">R$ 140,00</span></div>
+        <div class="item-servico"><span>Manutenção</span> <span class="preco">R$ 110,00</span></div>
+        <div class="item-servico"><span>Banho de Gel</span> <span class="preco">R$ 110,00</span></div>
+        <div class="item-servico"><span>Unha Quebrada (unidade)</span> <span class="preco">R$ 5,00</span></div>
+        <div class="item-servico"><span>Decoração</span> <span class="preco">A partir de R$ 5,00</span></div>
+        <div class="item-servico"><span>Remoção</span> <span class="preco">R$ 40,00</span></div>
+        <div class="item-servico"><span>Unha fora da manutenção</span> <span class="preco">R$ 10,00</span></div>
+    </div>
+
+    <div class="categoria">
+        <h2>Estética Facial</h2>
+        <div class="item-servico"><span>Limpeza de Pele</span> <span class="preco">R$ 110,00</span></div>
+        <div class="item-servico"><span>Sobrancelha</span> <span class="preco">R$ 30,00</span></div>
+        <div class="item-servico"><span>Sobrancelha com Henna</span> <span class="preco">R$ 40,00</span></div>
+        <div class="item-servico"><span>Epilação Buço</span> <span class="preco">R$ 20,00</span></div>
+
+        <div class="sub-categoria">Estética Corporal</div>
+        <div class="item-servico"><span>Epilação Axila</span> <span class="preco">R$ 30,00</span></div>
+        <div class="item-servico"><span>Pés, Mãos e Dedos</span> <span class="preco">R$ 25,00</span></div>
+        <div class="item-servico"><span>Meia Perna</span> <span class="preco">R$ 35,00</span></div>
+        <div class="item-servico"><span>Perna Completa</span> <span class="preco">R$ 60,00</span></div>
+        <div class="item-servico"><span>Virilha Simples</span> <span class="preco">R$ 30,00</span></div>
+        <div class="item-servico"><span>Virilha Cavada</span> <span class="preco">R$ 50,00</span></div>
+        <div class="item-servico"><span>Virilha Completa</span> <span class="preco">R$ 70,00</span></div>
+        <div class="item-servico"><span>Barriga / Costas</span> <span class="preco">R$ 30,00</span></div>
+        <div class="item-servico"><span>Glúteos</span> <span class="preco">R$ 40,00</span></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+:root {
+    --primaria: #b8977e; 
+    --texto: #4a3f35;
+    /* Cor de fundo suavizada para não cansar os olhos */
+    --fundo-suave: rgba(245, 240, 235, 0.85); 
+    --detalhe: #f4f1ee;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    color: var(--texto); 
+    line-height: 1.6; 
+    scroll-behavior: smooth; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: backgroundLoop 100s infinite ease-in-out; 
+    transition: background-image 3s ease-in-out;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
+
+/* Navegação - Branco levemente cinza para tirar o reflexo */
+header { 
+    background: #fdfcfb; 
+    padding: 10px 0; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03); 
+    border-bottom: 1px solid rgba(184, 151, 126, 0.1);
+}
+
+nav { 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover { transform: scale(1.05); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin: 0 15px; }
+nav ul li a { 
+    text-decoration: none; 
+    color: var(--texto); 
+    font-size: 0.8rem; 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+    transition: 0.3s; 
+}
+nav ul li a:hover { color: var(--primaria); }
+
+/* Hero - Efeito de vidro mais escuro e elegante */
+.hero { 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.hero-content { 
+    background: var(--fundo-suave) !important;
+    backdrop-filter: blur(12px);
+    padding: 50px; 
+    border-radius: 15px;
+    border: 1px solid rgba(184, 151, 126, 0.3); /* Borda no tom da logo */
+}
+
+.hero-content h1 { font-size: 3rem; margin-bottom: 5px; color: #2c3e50; }
+.hero-content p { 
+    font-size: 1rem; 
+    letter-spacing: 5px; 
+    text-transform: uppercase; 
+    color: var(--primaria); 
+    font-weight: 600; 
+}
+
+/* Seções Gerais */
+section { 
+    padding: 100px 20px; 
+    max-width: 1200px; 
+    margin: 80px auto; 
+    background: var(--fundo-suave) !important;
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    border: 1px solid rgba(184, 151, 126, 0.2);
+}
+
+.section-title { text-align: center; margin-bottom: 60px; }
+.section-title h2 { font-size: 2.8rem; margin-bottom: 10px; }
+.section-title span { 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    font-size: 0.8rem; 
+    color: var(--primaria); 
+}
+
+/* Grid de Serviços */
+.servicos-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+}
+
+.servico-card {
+    background: rgba(245, 240, 235, 0.90) !important;
+    padding: 45px 25px;
+    text-align: center;
+    transition: 0.4s;
+    border: 1px solid rgba(184, 151, 126, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+    border-radius: 15px;
+}
+
+.servico-card:hover {
+    background: rgba(255, 255, 255, 0.6) !important;
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1); 
+}
+
+.servico-card h3 { margin-bottom: 15px; font-size: 1.6rem; font-style: italic; }
+.price-list { 
+    list-style: none; 
+    font-size: 0.9rem; 
+    color: #777; 
+    margin-top: 15px; 
+    border-top: 1px solid #e0e0e0; 
+    padding-top: 15px; 
+}
+
+/* Seção Sobre Mim */
+.sobre { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
+
+.sobre-img { 
+    flex: 1; 
+    min-width: 300px; 
+    height: 500px; 
+    background-image: url('img/nathalie.jpg');
+    background-position: center 20%; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    position: relative; 
+    border-radius: 15px;
+}
+
+.sobre-img::after { 
+    content: ''; 
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    right: -20px; 
+    bottom: -20px; 
+    border: 2px solid var(--primaria); 
+    z-index: -1; 
+    border-radius: 15px;
+    opacity: 0.6;
+}
+
+.sobre-texto { flex: 1; min-width: 300px; }
+.sobre-texto h2 { font-size: 2.5rem; margin-bottom: 20px; }
+
+/* Formulário - Menos reflexo */
+form {
+    max-width: 550px;
+    margin: auto;
+    background: rgba(245, 240, 235, 0.95) !important;
+    padding: 40px;
+    display: grid;
+    gap: 15px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); 
+    border: 1px solid rgba(184, 151, 126, 0.3);
+}
+
+input, select, textarea {
+    width: 100%; 
+    padding: 15px; 
+    border: 1px solid #e5d3c5; 
+    background: #fff; 
+    font-family: inherit;
+    user-select: text;
+}
+
+.btn-book { 
+    width: 100%; 
+    background: #2c3e50; 
+    color: white; 
+    border: none; 
+    padding: 20px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    transition: 0.3s; 
+    border-radius: 5px;
+}
+.btn-book:hover { background: var(--primaria); }
+
+/* Footer */
+footer { text-align: center; padding: 60px; background: #fff; border-top: 1px solid #eee; margin-top: 50px; }
+.footer-logo { font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 10px; display: block; }
+
+/* Botão Flutuante WhatsApp */
+.whatsapp-float { 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    background: #25d366; 
+    color: white; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-decoration: none; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+    z-index: 2000; 
+    font-size: 12px; 
+    font-weight: bold; 
+}
+
+@keyframes backgroundLoop {
+    /* Ajustado para bater com as extensões reais dos seus arquivos */
+    0%, 12.5%    { background-image: url('img/loop0.jpeg'); }
+    12.6%, 25%   { background-image: url('img/loop1.jpeg'); }
+    25.1%, 37.5% { background-image: url('img/loop2.jpeg'); }
+    37.6%, 50%   { background-image: url('img/loop3.jpeg'); }
+    50.1%, 62.5% { background-image: url('img/loop5.jpeg'); }
+    62.6%, 75%   { background-image: url('img/loop6.jpeg'); }
+    75.1%, 87.5% { background-image: url('img/loop8.jpg'); }  /* Este é .jpg no seu print */
+    87.6%, 100%  { background-image: url('img/loop10.jpeg'); }
+}
+
+@media (max-width: 768px) {
+    nav { flex-direction: column; gap: 15px; }
+    nav ul { gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .hero-content h1 { font-size: 2rem; }
+    section { margin: 40px 10px; padding: 40px 15px; }
+    .sobre-img { height: 350px; }
+}
+
+/* Logo fixa no canto superior */
+.logo-fixa-canto {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px; /* Tamanho pequeno e discreto */
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.logo-fixa-canto:hover {
+    opacity: 1;
+}
+
+/* Ajuste no container para não bater na logo em telas pequenas */
+@media (max-width: 600px) {
+    .logo-fixa-canto {
+        width: 45px;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+/* Estilo para a Logo no Cardápio */
+        .logo-container {
+            margin: 20px 0 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img-logo-cardapio {
+            width: 180px; /* Tamanho equilibrado para mobile */
+            height: auto;
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.05));
+        }

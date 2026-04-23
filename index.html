@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathalie Bezerra | Links</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* Cores extraídas da sua logo */
+            --dourado-primario: #b8977e;
+            /* Ouro envelhecido */
+            --dourado-suave: #e5d3c5;
+            /* Bege rosado */
+            --fundo-premium: #fdfcfb;
+            /* Off-white quente */
+            --texto-titulo: #3d342d;
+            /* Marrom acinzentado profundo */
+            --texto-corpo: #6b5f56;
+            /* Marrom suave */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--fundo-premium);
+            /* Adicionando uma textura de mármore bem sutil ao fundo */
+            background-image: url('https://www.transparenttextures.com/patterns/white-marble.png');
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            color: var(--texto-corpo);
+        }
+
+        .container {
+            padding: 50px 20px;
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+        }
+
+        .logo-area {
+            margin-bottom: 45px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* LOGO AUMENTADA: Ajustada para destaque máximo */
+        .img-logo {
+            width: 280px;
+            /* Tamanho consideravelmente maior */
+            height: auto;
+            margin: 0 auto 20px auto;
+            display: block;
+            /* Leve sombra para dar profundidade à logo */
+            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.05));
+        }
+
+        .logo-area h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--texto-titulo);
+            margin: 0;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        .logo-area p {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 0.7rem;
+            color: var(--dourado-primario);
+            margin: 8px 0;
+            font-weight: 600;
+        }
+
+        .links-area {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 100%;
+        }
+
+        /* BOTÕES ESTILO BOUTIQUE: Bordas finas e cores da logo */
+        .btn-link {
+            background: #ffffff;
+            color: var(--texto-titulo);
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 2px;
+            /* Pontas levemente quadradas para um ar mais moderno/luxo */
+            font-weight: 400;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid var(--dourado-suave);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.02);
+            display: block;
+        }
+
+        .btn-link:hover {
+            transform: translateY(-3px);
+            background: var(--dourado-primario);
+            color: #ffffff;
+            border-color: var(--dourado-primario);
+            box-shadow: 0 10px 25px rgba(184, 151, 126, 0.25);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Rodapé sutil */
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            font-size: 0.6rem;
+            letter-spacing: 1px;
+            color: var(--dourado-primario);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo-area">
+            <img src="logo.jpg" alt="Logo Nathalie Bezerra" class="img-logo">
+            <h1>Nathalie Bezerra</h1>
+            <p>Estética e Bem-Estar</p>
+        </div>
+
+        <div class="links-area">
+            <a href="links.html" class="btn-link">Conheça nosso Site Oficial</a>
+
+            <a href="https://api.whatsapp.com/send/?phone=5581999208085" target="_blank" class="btn-link">
+                Agende pelo WhatsApp
+            </a>
+
+            <a href="https://www.google.com/maps/place/Nathalie+Bezerra+estética+e+bem+estar/@-8.1187245,-35.0992365,20.86z/data=!4m6!3m5!1s0x7ab03aa163b2b15:0xd9a22588228f52ea!8m2!3d-8.1187513!4d-35.0991818!16s%2Fg%2F11s1qc7cp2?entry=ttu&g_ep=EgoyMDI2MDQyMS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" class="btn-link">
+                Como chegar ao Salão
+            </a>
+
+            <a href="cardapio.html" class="btn-link">Serviços e Valores</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 NATHALIE BEZERRA - TODOS OS DIREITOS RESERVADOS
+    </footer>
+
+</body>
+
+</html>
